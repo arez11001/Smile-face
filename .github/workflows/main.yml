@@ -31,6 +31,8 @@ jobs:
 
       - name: Compile sketch
         run: |
+          mkdir happy_faces
+          cp happy_faces.ino happy_faces/happy_faces.ino
           arduino-cli compile \
             --fqbn esp32:esp32:esp32 \
             --output-dir ./build \
